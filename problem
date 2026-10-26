@@ -1,0 +1,189 @@
+```csharp
+Console.Write("Enter a number: ");
+int number = int.Parse(Console.ReadLine());
+
+if (number % 2 == 0)
+{
+    Console.WriteLine("Even Number");
+}
+else
+{
+    Console.WriteLine("Odd Number");
+}
+```
+
+
+```csharp
+Console.Write("Enter grade: ");
+int grade = int.Parse(Console.ReadLine());
+
+if (grade < 0 || grade > 100)
+{
+    Console.WriteLine("Invalid Grade");
+}
+else if (grade >= 90)
+{
+    Console.WriteLine("Excellent");
+}
+else if (grade >= 80)
+{
+    Console.WriteLine("Very Good");
+}
+else if (grade >= 70)
+{
+    Console.WriteLine("Good");
+}
+else if (grade >= 50)
+{
+    Console.WriteLine("Pass");
+}
+else
+{
+    Console.WriteLine("Fail");
+}
+```
+
+
+
+```csharp
+Console.Write("Enter a number: ");
+int number = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= 12; i++)
+{
+    Console.WriteLine($"{number} x {i} = {number * i}");
+}
+```
+
+
+
+
+```csharp
+int[] numbers = { 10, 20, 30, 40, 50 };
+
+int sum = 0;
+
+for (int i = 0; i < numbers.Length; i++)
+{
+    sum += numbers[i];
+}
+
+Console.WriteLine("Sum = " + sum);
+```
+
+
+
+
+```csharp
+int[] numbers = { 12, 45, 7, 89, 23, 56 };
+
+int largest = numbers[0];
+
+for (int i = 1; i < numbers.Length; i++)
+{
+    if (numbers[i] > largest)
+    {
+        largest = numbers[i];
+    }
+}
+
+Console.WriteLine("Largest = " + largest);
+```
+
+
+
+
+```csharp
+List<string> students = new List<string>()
+{
+    "Ahmed",
+    "Ali",
+    "Omar",
+    "Mohamed",
+    "Khaled"
+};
+
+foreach (string student in students)
+{
+    Console.WriteLine(student);
+}
+
+students.Add("Mahmoud");
+
+Console.WriteLine("Updated List:");
+
+foreach (string student in students)
+{
+    Console.WriteLine(student);
+}
+```
+
+
+
+
+```csharp
+int[] numbers = { 10, 20, 30, 40, 50, 60, 70, 80 };
+
+Console.Write("Enter number to search: ");
+int search = int.Parse(Console.ReadLine());
+
+bool found = false;
+int index = -1;
+
+for (int i = 0; i < numbers.Length; i++)
+{
+    if (numbers[i] == search)
+    {
+        found = true;
+        index = i;
+        break;
+    }
+}
+
+if (found)
+{
+    Console.WriteLine("Found");
+    Console.WriteLine("Index = " + index);
+}
+else
+{
+    Console.WriteLine("Not Found");
+}
+```
+
+
+
+
+
+
+
+```csharp
+List<double> prices = new List<double>()
+{
+    200, 300, 250, 400, 150
+};
+
+double total = 0;
+
+Console.WriteLine("Product Prices:");
+
+foreach (double price in prices)
+{
+    Console.WriteLine(price);
+    total += price;
+}
+
+Console.WriteLine("Total Before Discount = " + total);
+
+double discount = 0;
+
+if (total > 1000)
+{
+    discount = total * 0.10;
+}
+
+double finalPrice = total - discount;
+
+Console.WriteLine("Discount = " + discount);
+Console.WriteLine("Total After Discount = " + finalPrice);
+```
